@@ -2,19 +2,30 @@
 #include<string>
 #include<iostream>
 using namespace std;
-const int SIZE = 12;
+const int SIZE = 13;
 int main()
-{
-vector < vector <int> > multTable;
+{ vector < vector < int > > multTable;
+  multTable.resize(SIZE);
+  for(int i =0; i <= SIZE; i++)
+  {     
+        multTable[i].resize(SIZE);
+  }
 
-for(int row = 0; row < SIZE; row++)
-{   for(int col = 0 ; col < SIZE; col++)
+  for(int j = 0; j< SIZE; j++)
+  {   for(int l = 0; l <SIZE; l++)
+      {
+       multTable[j][l] = j*l;
+      }
+
+  }
+  for(int i = 0; i < SIZE; i++)
+  { for(int j=0; j < SIZE; j++)
     {
-         multTable[row][col] = row*col;
-         
+        cout <<" " << multTable[i][j] <<" "; 
     }
-}
-cout<< multTable[0][0] << endl;
+    cout << endl;
+  }
+
 
 return 0;
 }
