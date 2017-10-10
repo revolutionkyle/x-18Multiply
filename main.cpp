@@ -20,8 +20,8 @@ int main()
   }
   for(int i = 0; i < SIZE; i++)
   { for(int j=0; j < SIZE; j++)
-    {
-        cout <<" " << multTable[i][j] <<" "; 
+    {   
+     cout <<" " << multTable[i][j] <<" ";
     }
     cout << endl;
   }
